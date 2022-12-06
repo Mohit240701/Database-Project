@@ -1,6 +1,6 @@
-/* =================== CRUD STATEMENTS =================================== */
+CRUD STATEMENTS
 
-/* #1- How many copies of the book titled "The Lost Tribe" are owned by the library branch whose name is "Sharpstown"? */
+#1- How many copies of the book titled "The Lost Tribe" are owned by the library branch whose name is "Sharpstown"?
 
 CREATE PROC dbo.bookCopiesAtAllSharpstown 
 (@bookTitle varchar(70) = 'The Lost Tribe', @branchName varchar(70) = 'Sharpstown')
@@ -16,7 +16,7 @@ GO
 EXEC dbo.bookCopiesAtAllSharpstown 
 
 
-/* #2- How many copies of the book titled "The Lost Tribe" are owned by each library branch? */
+#2- How many copies of the book titled "The Lost Tribe" are owned by each library branch?
 
 CREATE PROC dbo.bookCopiesAtAllBranches 
 (@bookTitle varchar(70) = 'The Lost Tribe')
@@ -32,7 +32,7 @@ GO
 EXEC dbo.bookCopiesAtAllBranches
 
 
-/* #3- Retrieve the names of all borrowers who do not have any books checked out. */
+#3- Retrieve the names of all borrowers who do not have any books checked out.
 		
 CREATE PROC dbo.NoLoans
 AS
@@ -43,7 +43,7 @@ SELECT borrower_BorrowerName FROM tbl_borrower
 GO
 EXEC dbo.NoLoans
 
-/* #4- For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today, retrieve the book title, the borrower's name, and the borrower's address.  */
+#4- For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today, retrieve the book title, the borrower's name, and the borrower's address. 
 
 CREATE PROC dbo.LoanersInfo 
 (@DueDate date = NULL, @LibraryBranchName varchar(50) = 'Sharpstown')
@@ -71,7 +71,7 @@ SELECT  Branch.library_branch_BranchName AS [Branch Name], COUNT (Loans.book_loa
 GO
 EXEC dbo.TotalLoansPerBranch
 
-/* #6- Retrieve the names, addresses, and number of books checked out for all borrowers who have more than five books checked out. */
+#6- Retrieve the names, addresses, and number of books checked out for all borrowers who have more than five books checked out.
 
 CREATE PROC dbo.BooksLoanedOut
 (@BooksCheckedOut INT = 5)
@@ -87,7 +87,7 @@ EXEC dbo.BooksLoanedOut
 
 
 
-/* #7- For each book authored by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central".*/
+#7- For each book authored by "Stephen King", retrieve the title and the number of copies owned by the library branch whose name is "Central".
 
 CREATE PROC dbo.BookbyAuthorandBranch
 	(@BranchName varchar(50) = 'Central', @AuthorName varchar(50) = 'Stephen King')
@@ -101,4 +101,4 @@ AS
 GO	
 EXEC dbo.BookbyAuthorandBranch
 
-/* ==================================== STORED PROCEDURE QUERY QUESTIONS =================================== */
+
