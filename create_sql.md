@@ -3,8 +3,6 @@
 CREATE PROC dbo.LibraryManagementSystemProcedure
 AS
 CREATE DATABASE db_LibraryManagement
-	
-
 
 	CREATE TABLE tbl_publisher (
 		publisher_PublisherName VARCHAR(100) PRIMARY KEY NOT NULL,
