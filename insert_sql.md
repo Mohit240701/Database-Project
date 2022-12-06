@@ -1,5 +1,3 @@
-/*==================== POPULATING TABLES ======================*/
-	
 	INSERT INTO tbl_publisher
 		(publisher_PublisherName, publisher_PublisherAddress, publisher_PublisherPhone)
 		VALUES
@@ -88,6 +86,3 @@
 		('5','J.R.R. Tolkien'),
 		('6','Christopher Paolini');
 
-	SELECT * FROM tbl_book_authors
-END
-	/*============================== END INSERT TABLES ==============================*/
