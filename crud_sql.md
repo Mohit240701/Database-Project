@@ -60,7 +60,7 @@ SELECT Branch.library_branch_BranchName AS [Branch Name],  Book.book_Title [Book
 GO
 EXEC dbo.LoanersInfo 
 
-/* #5- For each library branch, retrieve the branch name and the total number of books loaned out from that branch.  */
+#5- For each library branch, retrieve the branch name and the total number of books loaned out from that branch.  
 
 CREATE PROC dbo.TotalLoansPerBranch
 AS
