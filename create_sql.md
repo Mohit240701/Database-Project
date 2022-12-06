@@ -1,10 +1,9 @@
-CREATE SQL TABLES FILE
-
+/* ======================= CREATE TABLES ========================*/
 
 CREATE PROC dbo.LibraryManagementSystemProcedure
 AS
 CREATE DATABASE db_LibraryManagement
-	/* ======================= CREATE TABLES ========================*/
+	
 
 
 	CREATE TABLE tbl_publisher (
