@@ -1,3 +1,5 @@
+CREATE SQL TABLES FILE
+
 
 CREATE PROC dbo.LibraryManagementSystemProcedure
 AS
